@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío de Privacidad - Pregunta 5</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f3e5f5; /* Un tono púrpura muy suave */
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .tarjeta-pregunta {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            max-width: 550px;
+            border-left: 8px solid #7b1fa2;
+        }
+        .opciones {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        button.opcion {
+            padding: 15px;
+            font-size: 1rem;
+            cursor: pointer;
+            border: 2px solid #7b1fa2;
+            background: white;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        button.opcion:hover {
+            background-color: #f3e5f5;
+        }
+        .boton-pista {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ffd600;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tarjeta-pregunta">
+        <p>Lo primero que necesitas saber es sobre la información personal. Esto es información que ayuda a la gente a saber quién eres y dónde estás. Las personas que conocen tu información personal pueden usarla para encontrarte.</p>
+        <h3>¿Cuál de estas es información personal?</h3>
+        
+        <div class="opciones">
+            <button class="opcion" onclick="validar(true)">Tu nombre</button>
+            <button class="opcion" onclick="validar(false)">El nombre de tu perro</button>
+        </div>
+    </div>
+
+    <button class="boton-pista" onclick="mostrarPista()">?? Pista</button>
+
+    <script>
+        function mostrarPista() {
+            alert("Pista: Piensa en qué dato aparece en tu documento de identidad o en la lista del colegio.");
+        }
+
+        function validar(esCorrecto) {
+            if(esCorrecto) {
+                alert("¡Excelente! Has recuperado el quinto pedazo del mapa. ?????");
+                // window.location.href = 'pregunta6.html';
+            } else {
+                alert("Mmm... hay muchos perros llamados igual, pero ¿cuál de los dos datos dice exactamente quién eres tú?");
+            }
+        }
+    </script>
+
+</body>
+</html>
