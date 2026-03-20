@@ -4,8 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Isla de Internet - Inicio</title>
-    <style>
+    <style /* Estilo del barco */
+.barco {
+    position: fixed;
+    bottom: 50px;
+    left: -100px; /* Empieza fuera de la pantalla a la izquierda */
+    font-size: 50px;
+    z-index: -1; /* Lo pone detrás de las tarjetas de preguntas */
+    animation: navegar 15s linear infinite; /* Se mueve cada 15 segundos para siempre */
+}
+
+/* Definición del movimiento */
+@keyframes navegar {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    25% {
+        transform: translateX(25vw) translateY(-10px); /* Sube un poquito */
+    }
+    50% {
+        transform: translateX(50vw) translateY(0); /* Baja */
+    }
+    75% {
+        transform: translateX(75vw) translateY(-10px); /* Sube otra vez */
+    }
+    100% {
+        transform: translateX(110vw) translateY(0); /* Sale por la derecha */
+    }
+}>
         body {
+            <div class="barco">⛵</div>
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #e0f7fa; /* Un azul claro como el mar */
             display: flex;
