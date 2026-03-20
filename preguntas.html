@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío de Privacidad - Pregunta 1</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .tarjeta-pregunta {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            max-width: 500px;
+            border-left: 8px solid #007c91;
+        }
+        .opciones {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        button.opcion {
+            padding: 12px;
+            font-size: 1rem;
+            cursor: pointer;
+            border: 2px solid #007c91;
+            background: white;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        button.opcion:hover {
+            background-color: #e0f7fa;
+        }
+        /* Botón de Pista en la esquina */
+        .boton-pista {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ffd600;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tarjeta-pregunta">
+        <p>Si publicas fotos o videos en Internet, es posible que luego cambies de opinión y quieras eliminarlos.</p>
+        <h3>¿Cuánto tiempo puede permanecer en Internet el contenido que publicas?</h3>
+        
+        <div class="opciones">
+            <button class="opcion" onclick="validar(true)">Para siempre</button>
+            <button class="opcion" onclick="validar(false)">Hasta que lo borres</button>
+        </div>
+    </div>
+
+    <button class="boton-pista" onclick="mostrarPista()">💡 Pista</button>
+
+    <script>
+        function mostrarPista() {
+            alert("Pista: Aunque borres algo, otras personas podrían haber tomado capturas de pantalla o guardado el archivo en otros servidores.");
+        }
+
+function validar(esCorrecto) {
+    if(esCorrecto) {
+        alert("¡Correcto! Has recuperado el primer pedazo del mapa. 🗺️");
+        window.location.href = 'pregunta2.html'; // <--- Añade esta línea
+    } else {
+                alert("Piénsalo de nuevo... ¿Realmente desaparece todo cuando presionas borrar?");
+            }
+        }
+    </script>
+
+
+</body>
+</html>

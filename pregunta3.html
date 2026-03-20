@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío de Privacidad - Pregunta 3</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff9c4; /* Un amarillo arena muy suave */
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .tarjeta-pregunta {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            max-width: 550px;
+            border-left: 8px solid #fbc02d; /* Amarillo oscuro / dorado */
+        }
+        .opciones {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        button.opcion {
+            padding: 15px;
+            font-size: 1rem;
+            cursor: pointer;
+            border: 2px solid #fbc02d;
+            background: white;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        button.opcion:hover {
+            background-color: #fffde7;
+        }
+        /* Botón de Pista en la esquina */
+        .boton-pista {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ffd600;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tarjeta-pregunta">
+        <p>A veces, las personas en línea te pedirán que proporciones información personal. Los sitios web también pueden hacerlo. Debes tener mucho cuidado al proporcionarla.</p>
+        <h3>¿Qué debes hacer antes de proporcionar información personal en línea?</h3>
+        
+        <div class="opciones">
+            <button class="opcion" onclick="validar(false)">Piénsalo dos veces</button>
+            <button class="opcion" onclick="validar(true)">Pregúntale a un adulto de confianza</button>
+        </div>
+    </div>
+
+    <button class="boton-pista" onclick="mostrarPista()">💡 Pista</button>
+
+    <script>
+        function mostrarPista() {
+            alert("Pista: Aunque pensarlo dos veces es bueno, ¡un adulto tiene más experiencia para saber si un sitio es peligroso!");
+        }
+
+        function validar(esCorrecto) {
+            if(esCorrecto) {
+                alert("¡Muy bien hecho! Has recuperado el tercer pedazo del mapa. 🗺️🏴‍☠️");
+                // Cuando tengas la cuarta página, descomenta la siguiente línea:
+                // window.location.href = 'pregunta4.html';
+            } else {
+                alert("Piénsalo mejor... ¿Quién puede ayudarte a tomar la decisión correcta?");
+            }
+        }
+    </script>
+
+</body>
+</html>
